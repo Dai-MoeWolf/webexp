@@ -1,0 +1,19 @@
+    int id = Integer.valueOf(request.getParameter("id")) ;
+    ResultSet rsByid = Query.selectSqlByid(id);
+    try {
+        while (rsByid.next()){
+%>
+<tr>
+    <td><%=rsByid.getInt("id")%></td>
+    <td><%=rsByid.getString("name")%></td>
+    <td><%=rsByid.getString("department")%></td>
+    <td><%=rsByid.getString("major")%></td>
+    <td><%=rsByid.getString("telephone")%></td>
+    <td><%=rsByid.getString("email")%></td>
+</tr>
+<%               }
+} catch (SQLException e) {
+    // TODO Auto-generated catch block
+    out.println("sql数据库查询异常");
+    e.printStackTrace();
+}

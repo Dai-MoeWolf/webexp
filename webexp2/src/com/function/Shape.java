@@ -1,0 +1,5 @@
+package com.function;
+
+public abstract class Shape {
+    public abstract double getArea();
+}
