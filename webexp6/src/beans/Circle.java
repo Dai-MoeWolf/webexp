@@ -7,6 +7,9 @@ public class Circle implements Shape{
     public Circle(double radius) {
         this.radius = radius;
     }
+    public Circle(){
+
+    }
 
     public double getRadius() {
         return radius;

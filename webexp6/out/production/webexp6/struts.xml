@@ -3,13 +3,13 @@
         "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
         "http://struts.apache.org/dtds/struts-2.0.dtd" >
 <struts>
-    <package name="webexp6"  extends="struts-default">
+    <package name="webexp6" namespace="/user" extends="struts-default">
         <action name="selectShape" class="action.SelectShape">
             <result name="success">/input.jsp</result>
             <result name="input">/input.jsp</result>
         </action>
         <action name="compute" class="action.Compute">
-            <result name="success">/result.jsp</result>
+            <result name="result">/result.jsp</result>
         </action>
     </package>
 </struts>
